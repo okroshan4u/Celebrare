@@ -148,7 +148,7 @@ if (saved) restoreState(saved);
 ```
 
 ---
-# 🎛️ Editor Controls
+#  Editor Controls
 
 ## Inline Editor (Right Panel)
 
@@ -175,7 +175,7 @@ if (saved) restoreState(saved);
 
 ---
 
-# 🖼️ Thumbnails
+#  Thumbnails
 
 - Auto-generated for every slide
 - Live updated
@@ -186,9 +186,9 @@ JS uses:
 updateThumbnailsPreview();
 ```
 
-# 📊 Exporting Slides
+#  Exporting Slides
 
-Click **Download** ⬇️:
+Click **Download** :
 
 - Temporarily hides UI
 - Captures each slide with html2canvas
@@ -231,7 +231,7 @@ My_Project-slide-3.png
 
 # ❗ Troubleshooting
 
-## ✓ Frame image not visible
+##  Frame image not visible
 
 Make sure you used correct structure:
 ```html
@@ -259,7 +259,7 @@ Free for personal and commercial use.
 
 ---
 
-# 👤 Author
+#  Author
 
 **Roshan Kumar Ram**  
 NIT Rourkela
