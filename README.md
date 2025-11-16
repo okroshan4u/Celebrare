@@ -36,31 +36,31 @@ A complete web-based slide/card editor built using **vanilla JavaScript**, with 
 - Alignment (left → center → right)
 - Style (Regular / Bold / Italic)
 
-## ✓ Frame-Based Slide Templates
+##  Frame-Based Slide Templates
 
 - Each slide has a `<div class="slide-frame">`
 - No broken image icon
 - Easy to swap backgrounds
 
-## ✓ Thumbnail Navigation
+##  Thumbnail Navigation
 
 - Real-time miniature previews
 - Updates automatically
 - Click to jump to slide
 
-## ✓ Undo / Redo System
+##  Undo / Redo System
 
 - Ctrl + Z and Ctrl + Shift + Z
 - Buttons included
 - Up to 50 history states
 
-## ✓ Auto-Persistence via LocalStorage
+##  Auto-Persistence via LocalStorage
 
 - First load → shows default template
 - After editing → reload keeps exact state
 - No data loss on refresh
 
-## ✓ Export as PNG
+##  Export as PNG
 
 - Uses html2canvas
 - Downloads each slide individually
