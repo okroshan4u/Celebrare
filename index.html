@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="back-btn">
+                <span>←</span>
+                <span>Back</span>
+            </div>
+            <div class="undo-redo-btns">
+                <button class="icon-btn-header" id="undoBtn" title="Undo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 7v6h6"></path>
+                        <path d="M21 17a9 9 0 00-9-9 9 9 0 00-6 2.3L3 13"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn-header" id="redoBtn" title="Redo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 7v6h-6"></path>
+                        <path d="M3 17a9 9 0 019-9 9 9 0 016 2.3l3 2.7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="header-title" id="projectTitle" contenteditable="true">Untitled Video</div>
+        </div>
+        <div class="header-right">
+            <button class="btn" id="saveBtn">Save</button>
+            <button class="btn btn-primary" id="downloadBtn">Download ⬇</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-title">All Page</div>
+            
+            <div class="page-thumbnail active" onclick="goToSlide(0)">
+                
+                <div class="thumbnail-container"></div>
+            </div>
+           <div class="page-label slide-label" contenteditable="true">Page 1</div>
+
+            <div class="page-thumbnail" onclick="goToSlide(1)">
+               
+                <div class="thumbnail-container"></div>
+            </div>
+            <div class="page-label">Page 2</div>
+
+            <div class="page-thumbnail" onclick="goToSlide(2)">
+               
+                <div class="thumbnail-container"></div>
+            </div>
+            <div class="page-label">Page 3</div>
+
+            <button class="customize-btn">Customize Pages</button>
+        </div>
+
+        <div class="canvas-area">
+            <div class="swiper-container-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image-container" data-slide="0">
+                                <img src="1.jpg" alt="" srcset="">
+                                <div class="text-element" data-text-id="0" style="top: 30%; left: 10%; font-size: 22px; color: #8b7355; font-family: 'Georgia', serif; text-align: center; width: 80%;">
+                                    We invite you and your family's gracious presence and blessing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-container" data-slide="1">
+                                 <img src="2.jpg" alt="" srcset="">
+                                <div class="text-element" data-text-id="1" style="top: 40%; left: 15%; font-size: 24px; color: #333; font-family: Arial, sans-serif;">
+                                    Slide 2 - Add your blessing
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image-container" data-slide="2">
+                                <img src="3.jpg" alt="" srcset="">
+                                <div class="text-element" data-text-id="2" style="top: 35%; left: 15%; font-size: 22px; color: #555; font-family: 'Courier New', monospace;">
+                                    Slide 3 - Customize this text
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="more-options">✏️ More editing options</div>
+            </div>
+        </div>
+
+        <div class="editor-panel">
+            <div class="back-arrow">←</div>
+            <div class="panel-title" id="slideTitle" contenteditable="true">Blessing 1</div>
+
+            <div class="input-group">
+                <label class="input-label">Language</label>
+                <select class="dropdown">
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Spanish</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <textarea class="input-field" id="textContent" rows="3" placeholder="We invite you and your family's gracious presence and blessing"></textarea>
+            </div>
+
+            <div class="input-group">
+                <div class="two-col">
+                    <div>
+                        <label class="input-label">Font</label>
+                        <select class="dropdown" id="fontFamily">
+                            <option value="'Georgia', serif">Charm</option>
+                            <option value="Arial, sans-serif">Arial</option>
+                            <option value="'Times New Roman', serif">Times New Roman</option>
+                            <option value="'Courier New', monospace">Courier</option>
+                            <option value="'Verdana', sans-serif">Verdana</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="input-label">Style</label>
+                        <select class="dropdown" id="fontStyle">
+                            <option value="normal">Regular</option>
+                            <option value="bold">Bold</option>
+                            <option value="italic">Italic</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="icon-row">
+                    <div class="icon-btn">
+                        <div class="color-picker-wrapper">
+                            <div class="color-preview" id="colorPreview" style="background: #000;" onclick="document.getElementById('fontColor').click()"></div>
+                            <input type="color" id="fontColor" class="color-input" value="#000000">
+                        </div>
+                        <span>Color</span>
+                    </div>
+                    <div class="icon-btn">
+                        <div class="icon-box">
+                            <input type="number" id="fontSize" value="21" min="12" max="72" style="width:35px;border:none;text-align:center;">
+                        </div>
+                        <span>Font Size</span>
+                    </div>
+                    <div class="icon-btn" id="alignmentBtn">
+                        <div class="icon-box">≡</div>
+                        <span>Alignment</span>
+                    </div>
+                    <div class="icon-btn" id="lineHeightBtn">
+                        <div class="icon-box">⋮⋮</div>
+                        <span>Line Height</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="two-col">
+                    <div>
+                        <label class="input-label">Choose Start Animation</label>
+                        <select class="dropdown">
+                            <option>None</option>
+                            <option>Fade In</option>
+                            <option>Slide In</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="input-label">Choose End Animation</label>
+                        <select class="dropdown">
+                            <option>None</option>
+                            <option>Fade Out</option>
+                            <option>Slide Out</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button class="add-text-btn" onclick="addText()">+ Add New Text</button>
+            <button class="delete-btn" onclick="deleteText()">Delete Selected Text</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
