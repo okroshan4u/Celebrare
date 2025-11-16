@@ -1,4 +1,4 @@
-# 🎨 Slide Designer – Drag, Resize, Style & Export
+#  Slide Designer – Drag, Resize, Style & Export
 
 A complete web-based slide/card editor built using **vanilla JavaScript**, with smart snapping, proportional resizing, inline editing, persistence, and PNG export.
 
