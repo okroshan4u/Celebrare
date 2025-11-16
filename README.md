@@ -4,24 +4,24 @@ A complete web-based slide/card editor built using **vanilla JavaScript**, with 
 
 ---
 
-## ✨ Features
+##  Features
 
-### ✔️ Drag & Move Text
+###  Drag & Move Text
 - Smooth drag inside slide
 - Snap to edges, centers & other elements
 - Auto alignment guides
 
-### ✔️ Smart Alignment Guides
+###  Smart Alignment Guides
 - Vertical & horizontal guides
 - Snaps when near matching positions
 - Helps maintain perfect symmetry
 
-### ✔️ Proportional Resize
+###  Proportional Resize
 - Resize using bottom–right corner
 - Text resizes proportionally
 - Prevents distortion
 
-### ✔️ Inline Text Editing
+###  Inline Text Editing
 - Double-click to edit text directly
 - Auto-expands height
 - Updates sidebar editor instantly
